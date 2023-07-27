@@ -225,7 +225,7 @@ section.catalog .card {
 }
 footer {
   margin-top: 10vh;
-  background-color: rgb(10, 10, 10);
+  background-color: black;
   padding-top: 2rem;
   padding-bottom: 0.5rem;
 }
