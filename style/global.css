@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: black;
+}
+
+nav {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding-block: 2vh;
+  height: 10vh;
+}
+nav div {
+  gap: 10vh;
+  display: flex;
+  align-items: center;
+  margin-inline: 15vh;
+}
+nav div ul {
+  display: flex;
+  gap: 3.75vh;
+  align-items: center;
+  list-style-type: none;
+}
+nav div ul a {
+  cursor: pointer;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.765);
+}
+nav div ul a:hover {
+  position: relative;
+  top: -1.5px;
+  color: white;
+}
+nav div ul .current {
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+}
+nav div ul .fa-cart-shopping {
+  color: white;
+}
+nav div ul i {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.765);
+  margin-top: 1vh;
+  font-size: 1.15rem;
+}
+nav div ul i:hover {
+  position: relative;
+  top: -1.5px;
+  color: white;
+}
+nav div img {
+  width: 10vh;
+}
+
+section.hero {
+  flex-direction: column;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+section.hero .data {
+  color: white;
+  border-radius: 5px;
+  padding: 1.5rem;
+  padding-block: 3rem;
+  width: 50vw;
+  text-align: center;
+}
+section.hero .data h1 {
+  letter-spacing: 0.4rem;
+  font-size: 2.7rem;
+  font-weight: bolder;
+}
+section.hero .data h1 span {
+  color: rgb(255, 0, 0);
+}
+section.hero .data p {
+  color: rgba(255, 255, 255, 0.75);
+  margin-inline: auto;
+  width: 30vw;
+  margin-top: 0.75rem;
+  font-weight: 500;
+  font-size: 1.15rem;
+}
+section.hero .data p span {
+  color: rgb(255, 0, 0);
+}
+section.hero .buttons {
+  display: flex;
+  gap: 2.5vw;
+}
+section.hero .buttons a {
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  color: white;
+  background: red;
+  padding: 2rem;
+  padding-block: 1rem;
+  border-radius: 10px;
+}
+section.hero .buttons .btn2 {
+  background-color: black;
+  border: 1.5px solid red;
+  color: red;
+  font-weight: 600;
+}
+section.hero .buttons a:hover {
+  transform: scale(1.035);
+  box-shadow: 0 0 11px rgba(255, 255, 255, 0.5);
+}
+
+section.catalog {
+  margin-top: 15vh;
+  margin-bottom: 25vh;
+  color: white;
+  background-color: black;
+}
+section.catalog .innercontainer {
+  margin-inline: 15vw;
+}
+section.catalog .innercontainer .search {
+  margin-bottom: 6.5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section.catalog .innercontainer .search p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  padding-block: 0.5rem;
+  background-color: rgb(30, 30, 30);
+  border-radius: 15px;
+}
+section.catalog .innercontainer .search p i {
+  color: red;
+}
+section.catalog .innercontainer .search p input {
+  color: white;
+  height: 2rem;
+  border: none;
+  background-color: rgb(30, 30, 30);
+}
+section.catalog .innercontainer .search p input:focus {
+  outline: none;
+}
+section.catalog .cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3vw;
+}
+section.catalog .btnac {
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: white;
+  background: red;
+  padding: 2rem;
+  padding-block: 0.6rem;
+  border-radius: 10px;
+  position: relative;
+  top: -2.5vh;
+}
+section.catalog .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 20vw;
+}
+
+.arrow {
+  margin-top: 10vh;
+  transform: rotate(360deg);
+  cursor: pointer;
+}
+
+.arrow span {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-bottom: 5px solid white;
+  border-right: 5px solid white;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: Ranimate 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+@keyframes Ranimate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+footer {
+  margin-top: 10vh;
+  background-color: rgb(10, 10, 10);
+  padding-top: 2rem;
+  padding-bottom: 0.5rem;
+}
+footer .copy {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: small;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+footer .container {
+  color: rgba(255, 255, 255, 0.7);
+  margin-inline: 15vw;
+  display: flex;
+  justify-content: space-between;
+}
+footer .container .paymenth3 {
+  margin-top: 1.5vh;
+}
+footer .container .payment {
+  margin-top: 2vh;
+  display: flex;
+  gap: 0.5vw;
+  flex-wrap: wrap;
+}
+footer .container .payment li i {
+  font-size: 1.25rem;
+}
+footer .container div {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+}
+footer .container div h3 {
+  color: red;
+  font-weight: normal;
+}
+footer .container div p {
+  margin-top: 1.5vh;
+}
+footer .container div ul {
+  margin-top: 1.5vh;
+  list-style-type: none;
+}
+footer .container div ul li a {
+  text-decoration: none;
+  font-size: small;
+  color: rgba(255, 255, 255, 0.7);
+}/*# sourceMappingURL=global.css.map */
