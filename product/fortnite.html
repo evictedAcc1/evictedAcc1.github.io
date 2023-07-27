@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style/global.css" />
+    <link rel="stylesheet" href="../style/global.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -16,7 +16,7 @@
   <body>
     <nav>
       <div>
-        <img src="./img/logos/logo.png" alt="Logo" />
+        <img src="../img/logos/logo.png" alt="Logo" />
         <ul>
           <li><a class="current" href="/home">Home</a></li>
           <li><a href="/catalog">Catalog</a></li>
@@ -39,61 +39,8 @@
         </ul>
       </div>
     </nav>
-
-    <section class="hero">
-      <div class="data">
-        <h1>Welcome on <span>Nectix.shop</span></h1>
-        <p>
-          <span>Unlock</span> unparalleled gaming prowess with our
-          <span>premium cheats</span> – where cutting-edge
-          <span>performance</span> meets unbeatable <span>quality</span>!
-          Elevate your experience with cheats that
-          <span>redefine</span> 'impossible' <span class="keyword">power</span>,
-          <span class="keyword">precision</span>, and
-          <span class="keyword">victory</span>!"
-        </p>
-      </div>
-      <div class="buttons">
-        <a href="#catalog"> Catalog </a>
-        <a class="btn2" href="/contact">Contact</a>
-      </div>
-      <a href="#catalog">
-        <div class="arrow reveal fade-bottom active">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </a>
-    </section>
-    <section id="catalog" class="catalog">
-      <div class="innercontainer">
-        <div class="search">
-          <h1>Games.</h1>
-          <p>
-            <i class="fa-solid fa-magnifying-glass"></i
-            ><input placeholder="Search" />
-          </p>
-        </div>
-
-        <div class="cards">
-          <div class="card">
-            <img src="./img/Frame 7.png" alt="Rust Picture" />
-            <a class="btnac" href="/product/r6">Go explore</a>
-          </div>
-          <div class="card">
-            <img src="./img/Frame 8.png" alt="Rust Picture" />
-            <a class="btnac" href="/product/rust">Go explore</a>
-          </div>
-          <div class="card">
-            <img src="./img/Frame 9.png" alt="Rust Picture" />
-            <a class="btnac" href="/product/valorant">Go explore</a>
-          </div>
-          <div class="card">
-            <img src="./img/Frame 10.png" alt="Rust Picture" />
-            <a class="btnac" href="/product/fortnite">Go explore</a>
-          </div>
-        </div>
-      </div>
+    <section class="soon">
+      <h1>Comming soon</h1>
     </section>
     <footer>
       <div class="container">
@@ -146,4 +93,14 @@
       </p>
     </footer>
   </body>
+  <style>
+    .soon {
+      color: red;
+      background-color: black;
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
 </html>
