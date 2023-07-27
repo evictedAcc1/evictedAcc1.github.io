@@ -81,7 +81,7 @@ section.hero .data {
 }
 section.hero .data h1 {
   letter-spacing: 0.4rem;
-  font-size: 2.7rem;
+  font-size: 2.2rem;
   font-weight: bolder;
 }
 section.hero .data h1 span {
@@ -93,7 +93,7 @@ section.hero .data p {
   width: 30vw;
   margin-top: 0.75rem;
   font-weight: 500;
-  font-size: 1.15rem;
+  font-size: 1rem;
 }
 section.hero .data p span {
   color: rgb(255, 0, 0);
@@ -104,12 +104,12 @@ section.hero .buttons {
 }
 section.hero .buttons a {
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-decoration: none;
   color: white;
   background: red;
-  padding: 2rem;
-  padding-block: 1rem;
+  padding: 1.5rem;
+  padding-block: 0.65rem;
   border-radius: 10px;
 }
 section.hero .buttons .btn2 {
@@ -133,7 +133,7 @@ section.catalog .innercontainer {
   margin-inline: 15vw;
 }
 section.catalog .innercontainer .search {
-  margin-bottom: 6.5vh;
+  margin-bottom: 9.5vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -143,8 +143,8 @@ section.catalog .innercontainer .search p {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  padding: 2rem;
-  padding-block: 0.5rem;
+  padding: 1.5rem;
+  padding-block: 0.25rem;
   background-color: rgb(30, 30, 30);
   border-radius: 15px;
 }
@@ -168,21 +168,20 @@ section.catalog .cards {
 section.catalog .btnac {
   text-align: center;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-decoration: none;
   color: white;
   background: red;
-  padding: 2rem;
-  padding-block: 0.6rem;
+  padding: 1rem;
+  padding-block: 0.4rem;
   border-radius: 10px;
   position: relative;
-  top: -2.5vh;
 }
 section.catalog .card {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 20vw;
+  width: 15vw;
 }
 
 .arrow {
