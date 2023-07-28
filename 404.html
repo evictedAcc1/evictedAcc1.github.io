@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../style/global.css" />
+    <link rel="stylesheet" href="./style/global.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -15,38 +15,48 @@
   </head>
   <body>
     <nav>
-      <div>
-        <img src="../img/logos/logo.png" alt="Logo" />
-        <ul>
-          <li><a class="current" href="/home">Home</a></li>
-          <li><a href="/catalog">Catalog</a></li>
-          <li><a href="/faq">FAQ</a></li>
-          <li><a href="/support">Support</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
-      </div>
-      <div class="second">
-        <ul>
-          <li>
-            <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
-          </li>
-          <li>
-            <a href="https://discord.gg/MJCytEyD2k"
-              ><i class="fa-brands fa-discord"></i
-            ></a>
-          </li>
-          <li><i class="fa-solid fa-language"></i></li>
-        </ul>
+      <div class="container">
+        <div class="navitems">
+          <img src="/img/logos/logo.png" alt="Logo" />
+          <ul class="mnav">
+            <li><a class="current" href="/">Home</a></li>
+            <li><a href="/catalog">Catalog</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/support">Support</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="second">
+          <ul>
+            <li>
+              <a href="/"><i class="fa-solid fa-bars"></i></a>
+            </li>
+            <li>
+              <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </li>
+            <li>
+              <a href="https://discord.gg/MJCytEyD2k"
+                ><i class="fa-brands fa-discord"></i
+              ></a>
+            </li>
+            <li>
+              <a href="/"><i class="fa-solid fa-language"></i></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
-    <section class="soon">
-      <h1>Comming soon</h1>
+    <section class="notfound">
+      <h2><span>Comming</span> soon!</h2>
+      <p>
+        <span>Nectix</span> is under development to ensure the best
+        <span>quality</span> once we are <span>online</span>.
+      </p>
     </section>
     <footer>
       <div class="container">
         <div>
-          <h3>About</h3>
-          <hr />
+          <h4>About</h4>
           <p>
             <span>Unlock</span> unparalleled gaming prowess with our
             <span>premium cheats</span> – where cutting-edge
@@ -59,10 +69,10 @@
           </p>
         </div>
         <div>
-          <h3>Quick links</h3>
-          <hr />
+          <h4>Quick links</h4>
+
           <ul>
-            <li><a href="/home">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="/catalog">Catalog</a></li>
             <li><a href="/faq">FaQ</a></li>
             <li><a href="/support">Support</a></li>
@@ -70,14 +80,16 @@
           </ul>
         </div>
         <div>
-          <h3>Contact</h3>
-          <hr />
+          <h4>Contact</h4>
+
           <ul>
             <li><a href="">info@nectix.shop</a></li>
             <li><a href="https://discord.gg/MJCytEyD2k">Discord</a></li>
           </ul>
-          <h3 class="paymenth3">Payment methods</h3>
-          <hr />
+        </div>
+        <div>
+          <h4 class="paymenth3">Payment methods</h4>
+
           <ul class="payment">
             <li><i class="fa-brands fa-stripe"></i></li>
             <li><i class="fa-solid fa-credit-card"></i></li>
@@ -89,18 +101,8 @@
         </div>
       </div>
       <p class="copy">
-        Copyright 2023 <i class="fa-solid fa-copyright"></i> Nectix
+        Copyright 2023 <i class="fa-solid fa-copyright" /> Nectix
       </p>
     </footer>
   </body>
-  <style>
-    .soon {
-      color: red;
-      background-color: black;
-      height: 50vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  </style>
 </html>

@@ -6,67 +6,81 @@
   font-family: sans-serif;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   background-color: black;
   overflow-x: hidden;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 nav {
   background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   color: white;
   padding-block: 2vh;
   height: 10vh;
 }
-nav .mobile {
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: 10vw;
+}
+nav .container .navitems {
+  display: flex;
+  gap: 10vh;
+  align-items: center;
+}
+nav .container .navitems img {
+  width: 10vh;
+}
+nav .container .navitems .fa-bars {
   display: none;
 }
-nav div {
-  gap: 5vh;
-  display: flex;
-  align-items: center;
-  margin-inline: 5vh;
-}
-nav div ul {
+
+nav .container ul {
   display: flex;
   gap: 3.75vh;
   align-items: center;
   list-style-type: none;
 }
-nav div ul a {
+nav .container ul a {
   cursor: pointer;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.765);
+  font-size: 0.7rem;
 }
-nav div ul a:hover {
+nav .container ul a:hover {
   position: relative;
   top: -1.5px;
   color: white;
 }
-nav div ul .current {
+nav .container .current {
   color: rgb(255, 0, 0);
   font-weight: bold;
 }
-nav div ul .fa-cart-shopping {
+nav .container .fa-cart-shopping {
   color: white;
 }
-nav div ul i {
-  cursor: pointer;
-  color: rgba(255, 255, 255, 0.765);
-  margin-top: 1vh;
-  font-size: 1.15rem;
-}
-nav div ul i:hover {
-  position: relative;
-  top: -1.5px;
-  color: white;
-}
-nav div img {
-  width: 10vh;
+nav .container .fa-bars {
+  display: none;
 }
 
+@media screen and (max-width: 900px) {
+  nav .container {
+    margin-inline: 5vw;
+  }
+  nav .container .navitems ul {
+    display: none;
+  }
+  nav .container .navitems .fa-bars {
+    display: block;
+  }
+}
 section.hero {
   flex-direction: column;
   background-color: black;
@@ -75,31 +89,35 @@ section.hero {
   align-items: center;
   height: 90vh;
 }
-section.hero .data {
+section.hero .title {
   color: white;
-  border-radius: 5px;
-  padding: 1.5rem;
-  padding-block: 3rem;
+  margin-bottom: 7.5vh;
   width: 50vw;
   text-align: center;
+
+  font-weight: 500;
+  font-size: 0.8rem;
+  margin-inline: 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-section.hero .data h1 {
-  letter-spacing: 0.4rem;
-  font-size: 2.2rem;
+section.hero .title h1 {
+  margin-bottom: 1.5vh;
+  letter-spacing: 0.3rem;
+  font-size: 1.85rem;
   font-weight: bolder;
 }
-section.hero .data h1 span {
-  color: rgb(255, 0, 0);
+section.hero .title h1 span {
+  color: red;
 }
-section.hero .data p {
+section.hero .title p {
   color: rgba(255, 255, 255, 0.75);
-  margin-inline: auto;
-  width: 30vw;
-  margin-top: 0.75rem;
-  font-weight: 500;
-  font-size: 1rem;
+
+  width: 35vw;
 }
-section.hero .data p span {
+section.hero .title p span {
   color: rgb(255, 0, 0);
 }
 section.hero .buttons {
@@ -126,81 +144,13 @@ section.hero .buttons a:hover {
   transform: scale(1.035);
   box-shadow: 0 0 11px rgba(255, 255, 255, 0.5);
 }
-
-section.catalog {
-  margin-top: 5vh;
-  margin-bottom: 25vh;
-  color: white;
-  background-color: black;
-}
-section.catalog .innercontainer {
-  margin-inline: 15vw;
-}
-section.catalog .innercontainer .search {
-  margin-bottom: 9.5vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-section.catalog .innercontainer .search p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.5rem;
-  padding-block: 0.25rem;
-  background-color: rgb(30, 30, 30);
-  border-radius: 15px;
-}
-section.catalog .innercontainer .search p i {
-  color: red;
-}
-section.catalog .innercontainer .search p input {
-  color: white;
-  height: 2rem;
-  border: none;
-  background-color: rgb(30, 30, 30);
-}
-section.catalog .innercontainer .search p input:focus {
-  outline: none;
-}
-
-.cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 3vw;
-}
-
-.btnac {
-  min-width: 220px;
-  text-align: center;
-  font-weight: 600;
-  font-size: 0.8rem;
-  text-decoration: none;
-  color: white;
-  background: red;
-  padding: 1rem;
-  padding-block: 0.4rem;
-  border-radius: 10px;
-  position: relative;
-}
-
-.card {
-  min-width: 220px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 15vw;
-}
-
-.arrow {
+section.hero .arrow {
   margin-top: 10vh;
   transform: rotate(360deg);
   cursor: pointer;
 }
 
-.arrow span {
+section.hero .arrow span {
   display: block;
   width: 1.5rem;
   height: 1.5rem;
@@ -211,14 +161,13 @@ section.catalog .innercontainer .search p input:focus {
   animation: Ranimate 2s infinite;
 }
 
-.arrow span:nth-child(2) {
+section.hero .arrow span:nth-child(2) {
   animation-delay: -0.2s;
 }
 
-.arrow span:nth-child(3) {
+section.hero .arrow span:nth-child(3) {
   animation-delay: -0.4s;
 }
-
 @keyframes Ranimate {
   0% {
     opacity: 0;
@@ -232,11 +181,102 @@ section.catalog .innercontainer .search p input:focus {
     transform: rotate(45deg) translate(20px, 20px);
   }
 }
+
+section.catalog {
+  margin-top: 5vh;
+  margin-bottom: 35vh;
+  color: white;
+  background-color: black;
+}
+section.catalog .innercontainer {
+  margin-inline: 5vw;
+}
+section.catalog .search {
+  margin-bottom: 9.5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section.catalog .search p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  padding-block: 0.1rem;
+  background-color: rgba(30, 30, 30, 1);
+  border-radius: 15px;
+}
+section.catalog .search p i {
+  color: red;
+  font-size: 0.85rem;
+}
+section.catalog .search p input {
+  color: white;
+  height: 2rem;
+  border: none;
+  background-color: rgba(30, 30, 30, 1);
+}
+section.catalog .search p input:focus {
+  outline: none;
+}
+section.catalog .cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3vw;
+  width: 90vw;
+}
+section.catalog .btnac {
+  min-width: 200px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: white;
+  background: red;
+  padding: 1rem;
+  padding-block: 0.3rem;
+  border-radius: 2.5px;
+  position: relative;
+}
+section.catalog .card {
+  min-width: 200px;
+  max-width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 15vw;
+}
+@media screen and (max-width: 900px) {
+  section.hero .title {
+    margin-inline: 5vw;
+  }
+  section.hero .title h1 {
+    text-align: center;
+    font-size: 1.25rem;
+  }
+  section.hero .title p {
+    min-width: 90vw;
+  }
+  section.catalog .search {
+    margin-top: 10vh;
+    flex-direction: column;
+    gap: 3vh;
+  }
+}
 footer {
-  margin-top: 10vh;
+  margin-top: auto;
   background-color: black;
   padding-top: 2rem;
   padding-bottom: 0.5rem;
+}
+footer .container {
+  color: rgba(255, 255, 255, 0.7);
+
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 10vw;
 }
 footer .copy {
   color: rgba(255, 255, 255, 0.7);
@@ -244,35 +284,18 @@ footer .copy {
   margin-top: 1.5rem;
   text-align: center;
 }
-footer .container {
-  color: rgba(255, 255, 255, 0.7);
-  margin-inline: 5vw;
-  display: flex;
-  justify-content: space-between;
-}
-footer .container .paymenth3 {
-  margin-top: 1.5vh;
-}
-footer .container .payment {
-  margin-top: 2vh;
-  display: flex;
-  gap: 0.5vw;
-  flex-wrap: wrap;
-}
-footer .container .payment li i {
-  font-size: 1.25rem;
-}
 footer .container div {
   display: flex;
   flex-direction: column;
-  width: 20vw;
+  width: calc(60vw / 4);
 }
-footer .container div h3 {
+footer .container div h4 {
   color: red;
   font-weight: normal;
 }
 footer .container div p {
   margin-top: 1.5vh;
+  font-size: 0.9rem;
 }
 footer .container div ul {
   margin-top: 1.5vh;
@@ -283,190 +306,41 @@ footer .container div ul li a {
   font-size: small;
   color: rgba(255, 255, 255, 0.7);
 }
+footer .container div .payment {
+  margin-top: 2vh;
+  display: flex;
+  gap: 1.5vw;
+  flex-wrap: wrap;
+  font-size: 1.3rem;
+}
 
-@media screen and (max-width: 1200px) {
-  .card {
-    margin-top: 10vh;
-  }
-  nav {
-    display: flex;
-    justify-content: space-between;
-  }
-  nav .mobile {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    color: white;
-  }
-  nav .mobile a {
-    text-decoration: none;
-    color: white;
-  }
-  nav .mnav {
-    display: none;
-  }
-  nav .second {
-    display: none;
-  }
-  nav section.hero {
-    flex-direction: column;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-  }
-  nav section.hero .data {
-    color: white;
-    width: 90vw;
-    text-align: center;
-  }
-  nav section.hero .data h1 {
-    letter-spacing: 0.4rem;
-    font-size: 1.5rem;
-    font-weight: bolder;
-  }
-  nav section.hero .data h1 span {
-    color: rgb(255, 0, 0);
-  }
-  nav section.hero .data p {
-    color: rgba(255, 255, 255, 0.75);
-    margin-inline: auto;
-    width: 90vw;
-    margin-top: 0.75rem;
-    font-weight: 500;
-    font-size: 1rem;
-  }
-  nav section.hero .data p span {
-    color: rgb(255, 0, 0);
-  }
-  footer {
-    margin-top: 10vh;
-    background-color: black;
-    padding-top: 2rem;
-    padding-bottom: 0.5rem;
-  }
-  footer .copy {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: small;
-    margin-top: 1.5rem;
-    text-align: center;
-  }
+section.notfound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: red;
+  margin-top: auto;
+}
+section.notfound p {
+  color: white;
+}
+section.notfound span {
+  color: white;
+}
+
+section.notfound p span {
+  color: red;
+}
+
+@media screen and (max-width: 900px) {
   footer .container {
-    color: rgba(255, 255, 255, 0.7);
-    margin-inline: 5vw;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-  }
-  footer .container .paymenth3 {
-    margin-top: 1.5vh;
-  }
-  footer .container .payment {
-    margin-top: 2vh;
-    display: flex;
-    justify-content: center;
-    gap: 0.5vw;
-    flex-wrap: wrap;
-  }
-  footer .container .payment li i {
-    font-size: 1.25rem;
-  }
-  footer .container div {
-    display: flex;
-    flex-direction: column;
-    width: 90vw;
-  }
-  footer .container div h3 {
-    margin-bottom: 0.6rem;
-    text-align: center;
-    margin-top: 1rem;
-    color: red;
-    font-weight: normal;
-  }
-  footer .container div p {
-    margin-top: 1.5vh;
-  }
-  footer .container div ul {
-    text-align: center;
-    margin-top: 1.5vh;
-    list-style-type: none;
-  }
-  footer .container div ul li a {
-    text-decoration: none;
-    font-size: small;
-    color: rgba(255, 255, 255, 0.7);
-  }
-  .search {
-    margin-bottom: 9.5vh;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
     gap: 2.5vh;
-    flex-direction: column;
+    margin-inline: 5vw;
+  }
+  footer .container div {
+    width: 90vw;
   }
 }
-@media screen and (max-width: 600px) {
-  section.hero {
-    flex-direction: column;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-  }
-  section.hero .data {
-    color: white;
-    border-radius: 5px;
-    padding: 1.5rem;
-    padding-block: 3rem;
-    width: 90vw;
-    text-align: center;
-  }
-  section.hero .data h1 {
-    letter-spacing: 0.4rem;
-    font-size: 2rem;
-    font-weight: bolder;
-  }
-  section.hero .data h1 span {
-    color: rgb(255, 0, 0);
-  }
-  section.hero .data p {
-    color: rgba(255, 255, 255, 0.75);
-    margin-inline: auto;
-    width: 80vw;
-    margin-top: 0.75rem;
-    font-weight: 500;
-    font-size: 1rem;
-  }
-  section.hero .data p span {
-    color: rgb(255, 0, 0);
-  }
-  section.hero .buttons {
-    display: flex;
-    gap: 2.5vw;
-  }
-  section.hero .buttons a {
-    font-weight: 600;
-    font-size: 0.8rem;
-    text-decoration: none;
-    color: white;
-    background: red;
-    padding: 1.5rem;
-    padding-block: 0.65rem;
-    border-radius: 10px;
-  }
-  section.hero .buttons .btn2 {
-    background-color: black;
-    border: 1.5px solid red;
-    color: red;
-    font-weight: 600;
-  }
-  section.hero .buttons a:hover {
-    transform: scale(1.035);
-    box-shadow: 0 0 11px rgba(255, 255, 255, 0.5);
-  }
-}/*# sourceMappingURL=global.css.map */
