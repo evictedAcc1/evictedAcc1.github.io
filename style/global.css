@@ -52,7 +52,7 @@ nav .container ul a {
   cursor: pointer;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.765);
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 nav .container ul a:hover {
   position: relative;
@@ -290,12 +290,13 @@ footer .container div {
   width: calc(60vw / 4);
 }
 footer .container div h4 {
+  font-size: 1.25rem;
   color: red;
   font-weight: normal;
 }
 footer .container div p {
   margin-top: 1.5vh;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
 }
 footer .container div ul {
   margin-top: 1.5vh;
@@ -303,7 +304,7 @@ footer .container div ul {
 }
 footer .container div ul li a {
   text-decoration: none;
-  font-size: small;
+  font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.7);
 }
 footer .container div .payment {
