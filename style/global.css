@@ -52,7 +52,7 @@ nav .container ul a {
   cursor: pointer;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.765);
-  font-size: 1rem;
+  font-size: 1.05rem;
 }
 nav .container ul a:hover {
   position: relative;
@@ -312,7 +312,7 @@ footer .container div .payment {
   display: flex;
   gap: 1.5vw;
   flex-wrap: wrap;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 section.notfound {
