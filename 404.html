@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Nectix- buy the best cheats while not spending fortunes, we at nectix sell the cheapest cheats for the best quality."
+    />
+
     <link rel="stylesheet" href="./style/global.css" />
     <link
       rel="stylesheet"
@@ -11,13 +16,23 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>Document</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://nectix.shop/img/logos/logo.png"
+    />
+    <title>Nectix Cheats</title>
   </head>
   <body>
     <nav>
       <div class="container">
         <div class="navitems">
-          <img src="/img/logos/logo.png" alt="Logo" />
+          <img src="
+          <link
+            rel="icon"
+            type="image/x-icon"
+            href="https://nectix.shop/img/logos/logo.png"
+          />" alt="Logo" />
           <ul class="mnav">
             <li><a class="current" href="/">Home</a></li>
             <li><a href="/catalog">Catalog</a></li>
@@ -105,4 +120,352 @@
       </p>
     </footer>
   </body>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: sans-serif;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    body {
+      background-color: black;
+      overflow-x: hidden;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      background-color: black;
+      color: white;
+      padding-block: 2vh;
+      height: 10vh;
+    }
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-inline: 10vw;
+    }
+    nav .container .navitems {
+      display: flex;
+      gap: 10vh;
+      align-items: center;
+    }
+    nav .container .navitems img {
+      width: 10vh;
+    }
+    nav .container .navitems .fa-bars {
+      display: none;
+    }
+
+    nav .container ul {
+      display: flex;
+      gap: 3.75vh;
+      align-items: center;
+      list-style-type: none;
+    }
+    nav .container ul a {
+      cursor: pointer;
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.765);
+      font-size: 0.95rem;
+    }
+    nav .container ul a:hover {
+      position: relative;
+      top: -1.5px;
+      color: white;
+    }
+    nav .container .current {
+      color: rgb(255, 0, 0);
+      font-weight: bold;
+    }
+    nav .container .fa-cart-shopping {
+      color: white;
+    }
+    nav .container .fa-bars {
+      display: none;
+    }
+
+    @media screen and (max-width: 900px) {
+      nav .container {
+        margin-inline: 5vw;
+      }
+      nav .container .navitems ul {
+        display: none;
+      }
+      nav .container .navitems .fa-bars {
+        display: block;
+      }
+    }
+    section.hero {
+      flex-direction: column;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 90vh;
+    }
+    section.hero .title {
+      color: white;
+      margin-bottom: 7.5vh;
+      width: 50vw;
+      text-align: center;
+
+      font-weight: 500;
+      font-size: 1rem;
+      margin-inline: 10vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    section.hero .title h1 {
+      margin-bottom: 1.5vh;
+      letter-spacing: 0.3rem;
+      font-size: 2.35rem;
+      font-weight: bolder;
+    }
+    section.hero .title h1 span {
+      color: red;
+    }
+    section.hero .title p {
+      color: rgba(255, 255, 255, 0.75);
+
+      width: 32.5vw;
+    }
+    section.hero .title p span {
+      color: rgb(255, 0, 0);
+    }
+    section.hero .buttons {
+      display: flex;
+      gap: 2.5vw;
+    }
+    section.hero .buttons a {
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-decoration: none;
+      color: white;
+      background: red;
+      padding: 1.6rem;
+      padding-block: 0.76rem;
+      border-radius: 10px;
+    }
+    section.hero .buttons .btn2 {
+      background-color: black;
+      border: 1.5px solid red;
+      color: red;
+      font-weight: 600;
+    }
+    section.hero .buttons a:hover {
+      transform: scale(1.035);
+      box-shadow: 0 0 11px rgba(255, 255, 255, 0.5);
+    }
+    section.hero .arrow {
+      margin-top: 10vh;
+      transform: rotate(360deg);
+      cursor: pointer;
+    }
+
+    section.hero .arrow span {
+      display: block;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-bottom: 5px solid white;
+      border-right: 5px solid white;
+      transform: rotate(45deg);
+      margin: -10px;
+      animation: Ranimate 2s infinite;
+    }
+
+    section.hero .arrow span:nth-child(2) {
+      animation-delay: -0.2s;
+    }
+
+    section.hero .arrow span:nth-child(3) {
+      animation-delay: -0.4s;
+    }
+    @keyframes Ranimate {
+      0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+      }
+    }
+
+    section.catalog {
+      margin-top: 5vh;
+      margin-bottom: 35vh;
+      color: white;
+      background-color: black;
+    }
+    section.catalog .innercontainer {
+      margin-inline: 5vw;
+    }
+    section.catalog .search {
+      margin-bottom: 9.5vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    section.catalog .search p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.5rem;
+      padding-block: 0.5rem;
+      background-color: rgba(30, 30, 30, 1);
+      border-radius: 15px;
+    }
+    section.catalog .search p i {
+      color: red;
+      font-size: 1rem;
+    }
+    section.catalog .search p input {
+      color: white;
+      height: 2rem;
+      border: none;
+      background-color: rgba(30, 30, 30, 1);
+    }
+    section.catalog .search p input:focus {
+      outline: none;
+    }
+    section.catalog .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 3vw;
+      width: 90vw;
+    }
+    section.catalog .btnac {
+      min-width: 250px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-decoration: none;
+      color: white;
+      background: red;
+      padding: 1rem;
+      padding-block: 0.55rem;
+      border-radius: 7.5px;
+      position: relative;
+    }
+    section.catalog .card {
+      min-width: 275px;
+      max-width: 20vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 15vw;
+    }
+    @media screen and (max-width: 900px) {
+      section.hero .title {
+        margin-inline: 5vw;
+      }
+      section.hero .title h1 {
+        text-align: center;
+        font-size: 1.25rem;
+      }
+      section.hero .title p {
+        min-width: 90vw;
+      }
+      section.catalog .search {
+        margin-top: 10vh;
+        flex-direction: column;
+        gap: 3vh;
+      }
+    }
+    footer {
+      margin-top: auto;
+      background-color: black;
+      padding-top: 2rem;
+      padding-bottom: 0.5rem;
+    }
+    footer .container {
+      color: rgba(255, 255, 255, 0.7);
+
+      display: flex;
+      justify-content: space-between;
+      margin-inline: 10vw;
+    }
+    footer .copy {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: small;
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+    footer .container div {
+      display: flex;
+      flex-direction: column;
+      width: calc(60vw / 4);
+    }
+    footer .container div h4 {
+      color: red;
+      font-weight: normal;
+    }
+    footer .container div p {
+      margin-top: 1.5vh;
+      font-size: 0.9rem;
+    }
+    footer .container div ul {
+      margin-top: 1.5vh;
+      list-style-type: none;
+    }
+    footer .container div ul li a {
+      text-decoration: none;
+      font-size: small;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    footer .container div .payment {
+      margin-top: 2vh;
+      display: flex;
+      gap: 1.5vw;
+      flex-wrap: wrap;
+      font-size: 1.3rem;
+    }
+
+    section.notfound {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: red;
+      margin-top: auto;
+    }
+    section.notfound p {
+      color: white;
+    }
+    section.notfound span {
+      color: white;
+    }
+
+    section.notfound p span {
+      color: red;
+    }
+
+    @media screen and (max-width: 900px) {
+      footer .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5vh;
+        margin-inline: 5vw;
+      }
+      footer .container div {
+        width: 90vw;
+      }
+    }
+  </style>
 </html>
