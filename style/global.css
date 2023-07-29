@@ -52,7 +52,7 @@ nav .container ul a {
   cursor: pointer;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.765);
-  font-size: 0.7rem;
+  font-size: 0.95rem;
 }
 nav .container ul a:hover {
   position: relative;
@@ -96,7 +96,7 @@ section.hero .title {
   text-align: center;
 
   font-weight: 500;
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin-inline: 10vw;
   display: flex;
   flex-direction: column;
@@ -106,7 +106,7 @@ section.hero .title {
 section.hero .title h1 {
   margin-bottom: 1.5vh;
   letter-spacing: 0.3rem;
-  font-size: 1.85rem;
+  font-size: 2.35rem;
   font-weight: bolder;
 }
 section.hero .title h1 span {
@@ -115,7 +115,7 @@ section.hero .title h1 span {
 section.hero .title p {
   color: rgba(255, 255, 255, 0.75);
 
-  width: 35vw;
+  width: 32.5vw;
 }
 section.hero .title p span {
   color: rgb(255, 0, 0);
@@ -126,12 +126,12 @@ section.hero .buttons {
 }
 section.hero .buttons a {
   font-weight: 600;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   text-decoration: none;
   color: white;
   background: red;
-  padding: 1.5rem;
-  padding-block: 0.65rem;
+  padding: 1.6rem;
+  padding-block: 0.76rem;
   border-radius: 10px;
 }
 section.hero .buttons .btn2 {
@@ -203,13 +203,13 @@ section.catalog .search p {
   align-items: center;
   gap: 1rem;
   padding: 1.5rem;
-  padding-block: 0.1rem;
+  padding-block: 0.5rem;
   background-color: rgba(30, 30, 30, 1);
   border-radius: 15px;
 }
 section.catalog .search p i {
   color: red;
-  font-size: 0.85rem;
+  font-size: 1rem;
 }
 section.catalog .search p input {
   color: white;
@@ -228,7 +228,7 @@ section.catalog .cards {
   width: 90vw;
 }
 section.catalog .btnac {
-  min-width: 200px;
+  min-width: 250px;
   text-align: center;
   font-weight: 600;
   font-size: 0.8rem;
@@ -236,12 +236,12 @@ section.catalog .btnac {
   color: white;
   background: red;
   padding: 1rem;
-  padding-block: 0.3rem;
-  border-radius: 2.5px;
+  padding-block: 0.55rem;
+  border-radius: 7.5px;
   position: relative;
 }
 section.catalog .card {
-  min-width: 200px;
+  min-width: 275px;
   max-width: 20vw;
   display: flex;
   flex-direction: column;
